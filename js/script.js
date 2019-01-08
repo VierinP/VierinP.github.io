@@ -14,3 +14,12 @@ $(window).on('load', function () {
    var $preloader = $('#preloader');
    $preloader.delay(1800).fadeOut('slow');
 });
+
+menu.onclick = function MyFunction() {
+   var x = document.getElementById("myTopnav");
+   if(x.className === "topnav") {
+      x.className += " responsive";
+   } else{
+    x.className = "topnav";
+   }
+}

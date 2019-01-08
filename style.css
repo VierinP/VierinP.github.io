@@ -3,7 +3,7 @@
 	padding: 0;
  }
 
- /*preloader
+ /*preloader*/
 .dws-progress-bar {
  position: absolute;
  top: 50%;
@@ -55,7 +55,7 @@
  display: inline-block;
  float: center;
  font-size: 50px;
-}*/
+}
 
 
 .logo{
@@ -63,6 +63,8 @@
 	float: left;
 	display: inline-block;
  }
+ /*menu*/
+
 .page img{
 	width: 100%;
 	z-index: -10;
@@ -87,11 +89,14 @@ nav a i:hover{
 	padding-bottom: 15px;
 	border-bottom: 2px solid #FFAD00;
  }
-.meat, .vegan, .services{
- 	position: absolute;
- 	top: 45%;
- 	text-align: center;
- } 
+#menu{
+	display: none;
+	position: absolute;
+    text-decoration: none;
+    right: 10px;
+    color: white;
+    margin: 2%;
+}
 .meat{
  	left: 4%;
  }
@@ -102,7 +107,10 @@ nav a i:hover{
 	right: 4%;
  }
 .meat, .vegan, .services{
-	height: 10%;
+	position: absolute;
+ 	top: 45%;
+ 	text-align: center;
+	height: 12%;
 	padding: 15px;
 	padding-bottom: 10px;
 	position: absolute;
@@ -143,12 +151,14 @@ nav a i:hover{
  	display: inline-block;
  	text-align: left;
  }
-
+footer img{
+	margin-bottom: -10%;
+ }
 footer nav{
     position: absolute;
 	display: inline-block;
     right: 6%;
-}
+ }
 .sign{
 	color: #F5F5F5;
 	padding: 15px;
@@ -157,16 +167,16 @@ footer nav{
 	position: absolute;
 	z-index: 10;
  }
- .sign input{
+.sign input{
  	height: 30px;
  	margin-right: 10px;
  }
- .sign button{
+.sign button{
  	background-color: #FFAD00;
     width: 90px;
     height: 35px;
     border-radius: 4px;
- }
+  }
  #b{
  	background-color: #FFAD00;
  	border-radius: 4px;
@@ -212,3 +222,95 @@ footer nav{
 #b a{
 	text-decoration: none;
  }
+@media screen and (max-width: 1200px){
+ 	nav{
+ 		margin-left: 40%;
+ 	}
+ 	nav a{
+ 		padding: 4px;
+ 	}
+ 	.meat, .vegan, .services{
+ 		font-size: 60%;
+ 		height: 8%;
+ 	    position: absolute;
+ 	    top: 35%;
+ 	    text-align: center;
+    } 
+    .text{
+    	width: 20%;
+    	height: 15%;
+    	margin-left: 35%;
+    }
+    
+}
+@media screen and (max-width: 1000px){
+    .text{
+    	margin-top: -23%;
+    	font-size: 80%;
+    }
+    .meat, .vegan, .services{
+    	top: 25%;
+    }
+    #menu{
+    	display: block;
+    	text-decoration: none;
+    	float: right;
+    	margin: 2%;
+    }
+    .sign, footer nav{
+    	margin-top: 10px;
+    }
+    header nav:not(:first-child){
+    	display: none;
+    }
+    nav a i:hover{
+	    color: #FFAD00;
+	    padding-bottom: 15px;
+	    border-bottom: 0px solid #FFAD00;
+    }
+    .topnav.responsive{
+		position: absolute;
+	}
+	.topnav.responsive{
+		text-align: center;
+		top: -10px;
+		display: block;
+		text-align: center;
+		background-color: #4E4B48;
+		border: 2px solid #FFAD00;
+		opacity: 0.5;
+		width: 20%;
+		padding: 10px;
+		font-style: bold;
+	}
+}
+@media screen and (max-width: 700px){
+ 	.meat, .vegan, .services{
+ 		top: 18%;
+ 		font-size: 40%;
+ 		height: 6%;   
+ 	    width: 20%;
+ 	}
+ 	.meat h2, .vegan h2, .services h2{
+        margin-bottom: 5px;
+ 	}
+ 	.sign{
+ 		padding: 5px;
+ 	}
+ 	.sign h3{
+ 		margin-bottom: -15px;
+ 	}
+    .sign input, .sign button{
+ 	    margin-top: -10px;
+    }   
+    .text{
+    	height: 10%;
+    	font-size: 60%; 
+    }
+    .text button, #b, .sign button, .sign input{
+    	width: 60%;
+    	height: 30%;
+    	font-size: 60%;
+    	text-align: center;
+    }    
+}
